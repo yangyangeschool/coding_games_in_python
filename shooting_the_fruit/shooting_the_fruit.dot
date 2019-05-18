@@ -1,0 +1,23 @@
+digraph {
+    {
+        node [fontcolor=black shape=box style=filled fillcolor="#7FFF00"]
+        start [label="開始" fillcolor="#87CEFA"]
+        end [label="結束" fillcolor="#87CEFA"]
+        draw [label="畫出蘋果"]
+        goodshoot [label="打到了"]
+        miss [label="沒打到"]
+        node [shape=diamond fillcolor="#FF00FF" fontsize=12]
+        mouse [label="玩家有沒有按滑鼠"]
+        click [label="玩家有沒有打中蘋果"]
+        
+    }
+    start -> draw
+    draw -> mouse
+    mouse -> click
+    mouse -> mouse [label = "noclick"  dir="back"]
+    click -> goodshoot [label = "Yes"]
+    click -> miss [label = "No"]
+    miss -> end
+    
+    goodshoot -> draw
+}
