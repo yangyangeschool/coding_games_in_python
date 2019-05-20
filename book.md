@@ -101,6 +101,6 @@ debug 有時很煩、很挫折，但是有點耐心，問問自己…
 
 ## Projects
 
-1. Shoot the Fruit
-2. 
+1. [Shoot the Fruit](./shooting_the_fruit/shooting_the_fruit.md)
+2. [Coin Collector](./coin_collector/coin_collector.md)
 
