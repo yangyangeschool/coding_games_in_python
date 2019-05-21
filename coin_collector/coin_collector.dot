@@ -1,0 +1,31 @@
+digraph {
+    {
+        node [fontcolor=black shape=box style=filled fillcolor="#7FFF00"]
+        start [label="開始" fillcolor="#87CEFA"]
+        end [label="結束" fillcolor="#87CEFA"]
+
+        set_score [label="score = 0"]
+        show_final_score [label="最後分數"]
+        move_fox [label="移動狐狸"]
+        increase_score [label="加分"]
+        place_coin [label="顯示硬幣"]
+
+        node [shape=diamond fillcolor="#FF00FF" fontsize=12]
+        time_up [label="時間到？"]
+        arrow_key [label="玩家按方向鍵？"]
+        fox_coin [label="狐狸碰到硬幣？"]
+        
+    }
+    start -> set_score
+    set_score -> time_up
+    show_final_score -> end
+    time_up -> show_final_score [label="Yes"]
+    time_up -> arrow_key [label="No"]
+    arrow_key -> move_fox [label="Yes"]
+    arrow_key -> fox_coin [label="No"]
+    fox_coin -> increase_score [label="Yes"]
+    fox_coin -> time_up [label="No"]
+    move_fox -> time_up
+    increase_score -> place_coin
+    place_coin -> time_up
+}
