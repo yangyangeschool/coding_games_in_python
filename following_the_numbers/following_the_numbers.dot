@@ -1,0 +1,27 @@
+digraph {
+    {
+        node [fontcolor=black shape=box style=filled fillcolor="#7FFF00"]
+        start [label="開始" fillcolor="#87CEFA"]
+        end [label="結束" fillcolor="#87CEFA"]
+        place_dot [label="顯示所有的點"]
+        reset [label="重設"]
+        draw_line [label="畫線"]
+
+        node [shape=diamond fillcolor="#FF00FF" fontsize=12]
+        correct_next_dot [label="下個點有沒有被click？"]
+        first_dot [label="是第1個點嗎？"]
+        anymore_dot [label="還有沒按到的點嗎？"]
+    }
+
+    start -> place_dot
+    place_dot -> correct_next_dot
+    correct_next_dot -> first_dot [label="Yes"]
+    correct_next_dot -> reset [label="No"]
+    reset -> correct_next_dot
+    first_dot -> correct_next_dot [label="Yes"]
+    first_dot -> draw_line [label="No"]
+    draw_line -> anymore_dot
+    anymore_dot -> correct_next_dot [label="Yes"]
+    anymore_dot -> end [label="No"]
+
+}
