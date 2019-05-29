@@ -4,7 +4,7 @@
 
 ## 程式流程
 
-![red_alert_flowchart](./red_alert_flowchart.svg)
+![red_alert_flowchart](./red_alert_flowchart.png)
 
 ## 開工
 
