@@ -1,0 +1,31 @@
+digraph {
+    {
+        node [fontcolor=black shape=box style=filled fillcolor="#7FFF00"]
+        
+        start [label="開始" fillcolor="#87CEFA"]
+        end [label="結束" fillcolor="#87CEFA"]
+
+        draw_layout [label="畫出且擺好星星"]
+        animate [label="移動星星\nanimate"]
+        speedup [label="增加星星且加速\n下一關"]
+
+        node [shape=diamond fillcolor="#FF00FF" fontsize=12]
+        star_clicked [label="星星被 click 了嗎？\n "]
+        is_red [label="是紅色星星嗎？\n "]
+        is_final [label="最後一關嗎？\n "]
+        reach_bottom [label="星星碰底了嗎？\n "]
+    }
+
+    start -> draw_layout
+    draw_layout -> animate
+    animate -> star_clicked
+    star_clicked -> is_red [label="Yes"]
+    star_clicked -> reach_bottom [label="No"]
+    is_red -> is_final [label="Yes"]
+    is_red -> end [label="No"]
+    is_final -> end [label="Yes"]
+    is_final -> speedup [label="No"]
+    speedup -> draw_layout
+    reach_bottom -> end [label="Yes"]
+    reach_bottom -> star_clicked [label="No"]
+}

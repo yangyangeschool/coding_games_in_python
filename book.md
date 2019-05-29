@@ -104,4 +104,4 @@ debug 有時很煩、很挫折，但是有點耐心，問問自己…
 1. [射蘋果](./shooting_the_fruit/shooting_the_fruit.md)
 2. [撿硬幣](./coin_collector/coin_collector.md)
 3. [連連看](./following_the_numbers/following_the_numbers.md)
-
+4. [紅色警戒](./red_alert/red_alert.md)

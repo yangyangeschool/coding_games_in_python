@@ -109,3 +109,16 @@
     ```
 
 4. 你有沒有發現，有些點會碰在一起，你可以讓他們不要碰在一起嗎？
+5. 你能加入計算時間的功能嗎？
+
+    ```python
+    # 時間外掛
+    from time import time
+
+    # 
+    def update():
+        pass
+
+    # 計算時間
+    total_time = end_time - start_time
+    ```
